@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style type="text/css">
+    .backdrop {
+        width: 100%;
+        height: 100%;
+    }
+
+    button {
+        display: flex;
+        align-content: center;
+        height: 50%;
+        width: 50%;
+    }
+</style>
+<script type="text/javascript">
+    function generateRandomNumber() {
+        const number = document.getElementById("generatedNumber");
+        number.innerText = Math.round((Math.random() * (1380 - 1361) + 1361)).toString();
+    }
+</script>
+<body>
+    <div class="backdrop">
+        <button id="generateNumberButton" onclick="generateRandomNumber()">Generate Random Number</button>
+        <p id="generatedNumber"></p>
+    </div>
+</body>
+</html>
