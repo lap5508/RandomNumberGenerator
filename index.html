@@ -21,12 +21,15 @@
     function generateRandomNumber() {
         const number = document.getElementById("generatedNumber");
         number.innerText = Math.round((Math.random() * (1380 - 1361) + 1361)).toString();
+        const message = document.getElementById("message");
+        message.innerText = "Fuck off Claire, you lost...big time!";
     }
 </script>
 <body>
     <div class="backdrop">
         <button id="generateNumberButton" onclick="generateRandomNumber()">Generate Random Number</button>
         <p id="generatedNumber"></p>
+        <p id="message"></p>
     </div>
 </body>
 </html>
