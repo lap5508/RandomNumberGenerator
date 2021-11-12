@@ -18,11 +18,18 @@
     }
 </style>
 <script type="text/javascript">
+    const messages = ["Fuck off Claire, you lost...big time!", "lost again!!!", "whooooops, fuck off again Claire!"];
+    let idx = 0;
+    
     function generateRandomNumber() {
         const number = document.getElementById("generatedNumber");
         number.innerText = Math.round((Math.random() * (1380 - 1361) + 1361)).toString();
         const message = document.getElementById("message");
-        message.innerText = "Fuck off Claire, you lost...big time!";
+        if (idx == 3) {
+            idx = 0;   
+        }
+        message.innerText = messages[idx];
+        idx++;
     }
 </script>
 <body>
